@@ -89,7 +89,7 @@ public class EmployeeController {
 
     /**
      * 员工分页查询
-     * @param employeeDTO
+     * @param
      * @return
      */
     @GetMapping("/page")
@@ -99,4 +99,16 @@ public class EmployeeController {
         PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);
         return Result.success(pageResult);
     }
+
+    /**
+     * 启用/禁用员工账号
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用禁用员工账号")
+    public Result startOrStop(@PathVariable Integer status, Long id){
+        log.info("启用禁用员工账号: {}, {}", status, id);
+        employeeService.startOrStop(status, id);    //后续步骤定义
+        return Result.success();
+    }
+
 }
