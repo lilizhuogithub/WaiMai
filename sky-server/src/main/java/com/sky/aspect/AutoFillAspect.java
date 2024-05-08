@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 
 /**
- * 自定义切面，实现公共字段自动填充处理逻辑
+ * 自定义切面，实现公共字段自动填充处理逻辑AOP
  */
 
 @Aspect

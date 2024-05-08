@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 自定义注解，用于表示莫格方法需要进行功能字段自动填充处理
+ * 自定义注解，用于表示某个方法需要进行功能字段自动填充处理
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
