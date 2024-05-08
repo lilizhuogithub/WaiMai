@@ -78,5 +78,20 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
                 builder().
                 userId(BaseContext.getCurrentId()).
                 build());
+
+
+//        Long userId = BaseContext.getCurrentId();
+//        ShoppingCart shoppingCart = ShoppingCart.builder()
+//                .userId(userId)
+//                .build();
+//        List<ShoppingCart> list = shoppingCartMapper.list(shoppingCart);
+//        return list;
+    }
+
+    /**
+     * 清空购物车商品
+     */
+    public void cleanShoppingCart() {
+        shoppingCartMapper.deleteByUserId(BaseContext.getCurrentId());
     }
 }
